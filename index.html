@@ -1,10 +1,28 @@
-
+# Prepare index.html content with embedded CSS
+embedded_html = f"""
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SeedTime Capital Management Limited</title>
-  <link rel="stylesheet" href="style.css">
+  <title>SEEDTIME CAPITAL MANAGEMENT LIMITED</title>
+  <style>
+    body {{ font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; }}
+    nav {{ display: flex; justify-content: space-between; align-items: center; background: #006400; padding: 10px 20px; position: sticky; top: 0; }}
+    .logo {{ height: 50px; }}
+    nav ul {{ list-style: none; display: flex; gap: 20px; }}
+    nav ul li a {{ color: white; text-decoration: none; font-weight: bold; }}
+    .hero {{ background-color: #228B22; color: white; text-align: center; padding: 80px 20px; }}
+    .hero h1 {{ font-size: 40px; }}
+    section {{ padding: 60px 20px; max-width: 1000px; margin: auto; }}
+    section h2 {{ color: #006400; margin-bottom: 20px; }}
+    .btn {{ background: #228B22; color: white; padding: 12px 20px; text-decoration: none; border-radius: 5px; margin-right: 10px; display: inline-block; }}
+    #services ul {{ list-style: disc; padding-left: 20px; }}
+    form {{ margin-top: 20px; }}
+    form input, form textarea {{ width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ccc; border-radius: 4px; }}
+    form button {{ background: #006400; color: white; padding: 14px 20px; border: none; border-radius: 5px; cursor: pointer; }}
+    form button:hover {{ background: #228B22; }}
+    footer {{ text-align: center; padding: 20px; background: #006400; color: white; }}
+  </style>
 </head>
 <body>
   <nav>
@@ -18,16 +36,22 @@
     </ul>
   </nav>
   <section class="hero">
-    <h1>Welcome to SeedTime Capital Management Limited</h1>
+    <h1>Welcome to SEEDTIME Capital Management Limited</h1>
     <p>Empowering your financial future with smart, secure, and high-yield solutions.</p>
   </section>
   <section id="about">
     <h2>About Us</h2>
-    <p>Founded in 2018, SeedTime Capital Management Limited is a distinguished financial services and consultancy firm...</p>
+    <p>Founded in 2018, SEEDTIME Capital Management Limited is a distinguished financial services and consultancy firm. We are is a distinguished financial services and consultancy firm that has been empowering clients since 2018. With a robust portfolio of financial solutions and expert guidance, we have consistently supported individuals and businesses in achieving their financial objectives.
+Our Expertise:
+Comprehensive financial advisory and strategic planning
+Tailored investment solutions designed to balance risk and reward
+Consultancy services that enhance financial management and decision-making
+</p>
   </section>
   <section id="thrivefund">
     <h2>ThriveFund Scheme</h2>
-    <p>ThriveFund is a modern savings and investment scheme offering 12%–15% annual returns...</p>
+    <p>ThriveFund is a modern savings and investment scheme that has relatively low risk compared to other similar investment schemes. With the ThriveFund Scheme powered BY SEEDTIME CAPITAL MANAGEMENT LIMITED, investors get a higher rate of return than a traditional savings account. Your capital is preserved while generating steady stream of income for you. Are you thinking of investing towards acquiring an asset, paying school fees or for financial freedom? Regardless of what your investment objectives are, the ThriveFund offers a more rewarding way to grow wealth. The fund is invested 100% in high quality short-term securities such as Treasury Bills, Commercial Papers and Fixed Deposits that are rated “BBB” and above.
+</p>
     <a href="https://thrivefundmarketrateunpaiddashboard-duxzilshsjaxvabytebwsd.streamlit.app/" target="_blank" class="btn">View Dashboard</a>
     <a href="https://forms.gle/wku2e3MuJ8qBCZUD6" target="_blank" class="btn">Apply Now</a>
   </section>
@@ -60,3 +84,12 @@
   </footer>
 </body>
 </html>
+"""
+
+# Save the embedded HTML file
+embedded_html_path = "/mnt/data/index_embedded.html"
+with open(embedded_html_path, "w") as f:
+    f.write(embedded_html)
+
+# Provide download link
+embedded_html_path
