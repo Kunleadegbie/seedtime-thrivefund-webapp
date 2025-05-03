@@ -119,13 +119,22 @@ footer {
   color: white;
 }
 
-.btn:hover, .resource-btn:hover { background: #006400; }
-    #services ul { list-style: disc; padding-left: 20px; }
-    form { margin-top: 20px; }
-    form input, form textarea { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ccc; border-radius: 4px; }
-    form button { background: #006400; color: white; border: none; padding: 14px 20px; border-radius: 5px; cursor: pointer; }
-    form button:hover { background: #228B22; }
-    footer { text-align: center; padding: 20px; background: #006400; color: white; }
+.resource-btn {
+  display: inline-block;
+  background: #228B22;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 8px 5px 8px 0;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.resource-btn:hover {
+  background: #006400;
+  transform: translateY(-2px);
+}
 
 </style>
 
@@ -185,11 +194,11 @@ Investment:<br>
   </section>
 
 <section id="resources">
-    <h2>Resources</h2>
-    <p>Click below to view our helpful documents about the ThriveFund scheme:</p>
-    <a href="https://docs.google.com/document/d/1_44JGZhoJuZtubZCXT1cePS4lBhIYxsM/edit?usp=sharing" target="_blank" class="resource-btn">📖 ThriveFund FAQ</a>
-    <a href="https://docs.google.com/presentation/d/1ULTNy8r1eXG8V-s2vleMcKhkqW5LJhlD/edit?usp=sharing" target="_blank" class="resource-btn">📊 ThriveFund Presentation</a>
-  </section>
+  <h2>Resources</h2>
+  <p>Click below to view our helpful documents about the ThriveFund scheme:</p>
+  <a href="https://drive.google.com/file/d/1fd6mk3juD5hDv7Mv9XSxd4U3NGvoZKPH/view?usp=sharing" target="_blank" class="resource-btn">📖 ThriveFund FAQ</a>
+  <a href="https://drive.google.com/file/d/1b0wrChk4aaqrQBdw5OTQk-ZJnZH90Edv/view?usp=sharing" target="_blank" class="resource-btn">📊 ThriveFund Presentation</a>
+</section>
 
   <section id="contact">
     <h2>Contact Us</h2>
